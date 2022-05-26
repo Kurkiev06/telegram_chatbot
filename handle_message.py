@@ -231,6 +231,7 @@ async def callback_task(call):
     async with bot.retrieve_data(call.from_user.id,
                                  call.message.chat.id) as info:
         name = info['name']
+        name = name.lower()
         task = info['task']
         project = info['project']
         if name not in elements.data[project][task]:
