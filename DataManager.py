@@ -4,7 +4,7 @@ class DataManager:
     def __init__(self) -> None:
         self.data = self.readJson()
 
-    def readJson(self):
+    def readJson(self) -> dict:
         with open("projectsData.json") as readFile:
             dataFromJson = json.load(readFile)
         return dataFromJson
@@ -14,14 +14,14 @@ class DataManager:
             json.dump(self.data, writeFile)
 
     def updateJson(self, project, task="", name="", times={}):
-        dataFromJson = self.readJson()
-        if project not in dataFromJson:
-            dataFromJson[project] = {}
-        if task not in dataFromJson and task != "":
-            dataFromJson[task] = {}
-        if name not in dataFromJson and name != "":
-            dataFromJson[name] = {}
+        self.data = self.readJson()
+        name = name.lower()
+        if project not in self.data:
+            self.data[project] = {}
+        if task != "" and task not in self.data[project]:
+            self.data[project][task] = {}
+        if name != "" and name not in self.data[project][task]:
+            self.data[project][task][name] = {}
         if times != {}:
-            dataFromJson[project][task][name] = times
-        self.data = dataFromJson
+            self.data[project][task][name] = times
         self.writeJson()
