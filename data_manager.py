@@ -1,20 +1,24 @@
 import json
 
+
 class DataManager:
     def __init__(self) -> None:
-        self.data = self.readJson()
+        self.data = self.read_json()
 
-    def readJson(self) -> dict:
-        with open("projectsData.json") as readFile:
+    # Returns dict with data from json file
+    def read_json(self) -> dict:
+        with open("projects_data.json") as readFile:
             dataFromJson = json.load(readFile)
         return dataFromJson
 
-    def writeJson(self):
-        with open("projectsData.json", 'w') as writeFile:
+    # Writing information to a file
+    def write_json(self):
+        with open("projects_data.json", 'w') as writeFile:
             json.dump(self.data, writeFile)
 
-    def updateJson(self, project, task="", name="", times={}):
-        self.data = self.readJson()
+    # Updating information
+    def update_json(self, project, task="", name="", times={}):
+        self.data = self.read_json()
         name = name.lower()
         if project not in self.data:
             self.data[project] = {}
@@ -24,4 +28,4 @@ class DataManager:
             self.data[project][task][name] = {}
         if times != {}:
             self.data[project][task][name] = times
-        self.writeJson()
+        self.write_json()
