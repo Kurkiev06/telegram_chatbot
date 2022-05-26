@@ -21,9 +21,9 @@ elements = DataManager()
 
 class MyStates(StatesGroup):
     name = State()
-    addProject = State()
-    addTask = State()
-    projectName = State()
+    add_project = State()
+    add_task = State()
+    project_name = State()
     worktime = State()
     message = State()
 
@@ -90,7 +90,7 @@ async def worktime(message):
 async def add_project(message):
     await bot.send_message(message.chat.id, "Введите название проекта")
     await bot.set_state(message.from_user.id,
-                        MyStates.addProject,
+                        MyStates.add_project,
                         message.chat.id)
 
 
@@ -100,7 +100,7 @@ async def add_task(message):
     await bot.send_message(message.chat.id,
                            "Введите название проекта, куда добавить задание")
     await bot.set_state(message.from_user.id,
-                        MyStates.projectName,
+                        MyStates.project_name,
                         message.chat.id)
 
 
@@ -125,11 +125,11 @@ async def get_projects(message):
 
 
 # Get project name and request task name
-@bot.message_handler(state=MyStates.projectName)
+@bot.message_handler(state=MyStates.project_name)
 async def get_project_name(message):
     project = message.text
     await bot.set_state(message.from_user.id,
-                        MyStates.addTask,
+                        MyStates.add_task,
                         message.chat.id)
     async with bot.retrieve_data(message.from_user.id,
                                  message.chat.id) as info:
@@ -138,7 +138,7 @@ async def get_project_name(message):
 
 
 # Get task name
-@bot.message_handler(state=MyStates.addTask)
+@bot.message_handler(state=MyStates.add_task)
 async def get_task_name(message):
     async with bot.retrieve_data(message.from_user.id,
                                  message.chat.id) as info:
@@ -151,7 +151,7 @@ async def get_task_name(message):
 
 
 # Get project name
-@bot.message_handler(state=MyStates.addProject)
+@bot.message_handler(state=MyStates.add_project)
 async def get_project_name(message):
     project = message.text
     elements.update_json(project)
