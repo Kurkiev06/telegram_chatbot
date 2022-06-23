@@ -1,1 +1,94 @@
-{"programming": {"learn python": {"kok": {"start": 0, "time": 0}}, "learn assembler": {}, "find job": {}}, "chatting": {"find freind": {}, "write a message": {}}, "pass exam": {"buy book": {}}, "\u043e\u0442\u0447\u0438\u0441\u043b\u0438\u0442\u044c\u0441\u044f": {"\u0437\u0430\u0431\u0438\u0442\u044c \u043d\u0430 \u0438\u0442\u043c\u043e": {"\u0412\u043e\u0432\u0430\u043d": {"start": 1653513761, "time": 3}, "hog go": {"start": 1653551903, "time": 3}}}, "hog": {}, "goh": {}, "gg": {}, "\u0437\u0430\u0431\u0438\u0442\u044c \u043d\u0430 \u0438\u0442\u043c\u043e": {}, "\u0412\u043e\u0432\u0430\u043d": {}, "test": {"temp": {"kok": {"start": 1653550910, "time": 5}, "klj": {"start": 1653550935, "time": 8}, "sdaf": {"start": 1653550946, "time": 4}}}, "test2": {}, "test3": {"tete": {"kok": {"start": 1653550736, "time": 58}, "lj": {"start": 1653550761, "time": 4}, "Bob Marlov": {"start": 1653551161, "time": 7}, "name": {"start": 1653563715, "time": 5}}}, "non": {}}
+{
+    "chatting": {
+        "write a message": {}
+    },
+    "goh": {},
+    "hog": {},
+    "programming": {
+        "find job": {},
+        "learn assembler": {},
+        "learn python": {
+            "kok": {
+                "start": 0,
+                "time": 0
+            },
+            "mine name": {
+                "start": 0,
+                "time": 0
+            },
+            "my name": {
+                "start": 1653716384,
+                "time": 14
+            }
+        }
+    },
+    "test": {
+        "temp": {
+            "klj": {
+                "start": 1653550935,
+                "time": 8
+            },
+            "kok": {
+                "start": 1653550910,
+                "time": 5
+            },
+            "sdaf": {
+                "start": 1653550946,
+                "time": 4
+            }
+        }
+    },
+    "test2": {},
+    "test3": {
+        "tete": {
+            "Bob Marlov": {
+                "start": 1653551161,
+                "time": 7
+            },
+            "kok": {
+                "start": 1653550736,
+                "time": 58
+            },
+            "lj": {
+                "start": 1653550761,
+                "time": 4
+            },
+            "name": {
+                "start": 1653563715,
+                "time": 5
+            },
+            "te": {
+                "start": 1653716652,
+                "time": 1475
+            }
+        }
+    },
+    "Завершить написание бота": {
+        "Добавить список затрат на проект": {
+            "чел": {
+                "start": 1653735256,
+                "time": 8
+            },
+            "чел2": {
+                "start": 1653735285,
+                "time": 5
+            }
+        },
+        "Протестировать авторизацию": {
+            "чел": {
+                "start": 1653735504,
+                "time": 9
+            }
+        }
+    },
+    "Проект 1": {
+        "Задание 1": {}
+    },
+    "Хорошая": {
+        "Суббота": {}
+    },
+    "Хорошая суббота": {},
+    "Хорошенько выспаться": {
+        "Сделать сладкий слип": {}
+    }
+}
